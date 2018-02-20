@@ -33,7 +33,7 @@ class AppDelegate(NSObject):
         for filetype in self.interface.document_types:
             fileTypes.addObject(filetype)
 
-        NSDocumentController.sharedDocumentController().runModalOpenPanel(panel, forTypes=fileTypes)
+        NSDocumentController.sharedDocumentController.runModalOpenPanel(panel, forTypes=fileTypes)
 
         # print("Untitled File opened?", panel.URLs)
         self.application_openFiles_(None, panel.URLs)
